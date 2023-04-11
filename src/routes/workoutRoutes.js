@@ -10,4 +10,14 @@ router
   })
   .post("/:workoutId", (req, res) => {
     res.send(`created workout ${req.params.workoutId}`);
+  })
+  .delete("/:workoutId", (req, res) => {
+    res.send(`delete ${req.params.workoutId}`)
+  }).patch("/:workoutId", (req, res) => {
+    res.send("Update an existing workout");
+  })
+  .patch("/:workoutId", (req, res) => {
+    res.send("Update an existing workout");
   });
+
+module.exports = router;
