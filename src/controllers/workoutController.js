@@ -6,7 +6,7 @@ const getAllWorkouts = (req, res) => {
 };
 
 const getOneWorkout = (req, res) => {
-    const 
+  const getOneWorkout = workoutService.getOneWorkout()
   res.send("Get an existing workout");
 };
 
