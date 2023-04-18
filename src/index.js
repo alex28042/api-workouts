@@ -1,8 +1,8 @@
 const express = require("express");
-const router = require("./routes/workoutRoutes");
+const routerWorkouts = require("./routes/workoutRoutes");
+const routerUsers = require("./routes/userRoutes")
 const app = express();
 const mysql = require("mysql");
-const { NODE_ENV_PASSWORD } = require("./config");
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -16,14 +16,14 @@ connection.connect((err) => {
   if (err) {
     throw err
   }
-
-  console.log("database connected");
 })
 
 const PORT = process.env.PORT || 3000;
 
 
-app.use("/api", router)
+app.use("/api/v1/workouts", routerWorkouts)
+app.use("/api/v1/users", routerUsers)
+
 
 app.listen(PORT, () => {
   console.log(`listening ${PORT}`);

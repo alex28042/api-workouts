@@ -1,7 +1,6 @@
 const connection = require("..");
 
 const getAllWorkouts = () => {
-  connection.query("")
   return;
 };
 

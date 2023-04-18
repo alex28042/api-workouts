@@ -1,12 +1,12 @@
 const workoutService = require("../services/workoutService");
 
 const getAllWorkouts = (req, res) => {
-   const allWorkouts = workoutService.getAllWorkouts()
+  const allWorkouts = workoutService.getAllWorkouts();
   res.send("Get all workouts");
 };
 
 const getOneWorkout = (req, res) => {
-  const getOneWorkout = workoutService.getOneWorkout()
+  const getOneWorkout = workoutService.getOneWorkout();
   res.send("Get an existing workout");
 };
 
@@ -23,9 +23,9 @@ const deleteOneWorkout = (req, res) => {
 };
 
 module.exports = {
-    getAllWorkouts,
-    getOneWorkout,
-    createNewWorkout,
-    updateOneWorkout,
-    deleteOneWorkout
-}
+  getAllWorkouts,
+  getOneWorkout,
+  createNewWorkout,
+  updateOneWorkout,
+  deleteOneWorkout,
+};
