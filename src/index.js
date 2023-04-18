@@ -7,11 +7,10 @@ const { NODE_ENV_PASSWORD } = require("./config");
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: `${NODE_ENV_PASSWORD}`,
+  password: "Password1234",
   database: "entrenamientos"
 })
 
-console.log(`${NODE_ENV_PASSWORD}`);
 
 connection.connect((err) => {
   if (err) {
